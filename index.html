@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
   <title>Frontend Mentor | News homepage</title>
   <link rel="stylesheet" href="./main.css">
 </head>
@@ -37,6 +37,9 @@
         </nav>
     </header>
     <nav class="mobile-nav">
+        <button class="toggle-button-open">
+            <img src="assets/images/icon-menu-close.svg">
+        </button>
         <ul class="mobile-nav__items">
             <li class="mobile-nav__item">
                 <a href="">Home</a>
@@ -56,6 +59,7 @@
         </ul>
     </nav>
     <main id="main-article">
+        <img src="assets/images/image-web-3-mobile.jpg">
         <h1>The Bright Future of Web 3.0?</h1>
         <p>We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?</p> 
         <button>Read more</button>
@@ -65,33 +69,45 @@
         <h2 class="new-articles__title">New</h2>
         <div class="new-article">
             <h3 class="new-article__title">Hydrogen VS Electric Cars</h3>
-            Will hydrogen-fueled cars ever catch up to EVs?
+            <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
         </div>
+        <hr>
         <div class="new-article">
             <h3 class="new-article__title">The Downsides of AI Artistry</h3>
-            What are the possible adverse effects of on-demand AI image generation?
+            <p>What are the possible adverse effects of on-demand AI image generation?</p>
         </div>
+        <hr>
         <div class="new-article">
             <h3 class="new-article__title">Is VC Funding Drying Up?</h3>
-            Private funding by VC firms is down 50% YOY. We take a look at what that means.
+            <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
         </div>
     </side>
 
     <footer id="popular-articles">
         <div class="popular-article">
-            <h2 class="popular-article__title">01</h2>
-            <h3>Reviving Retro PCs</h3>
-            What happens when old PCs are given modern upgrades?
+            <img class="popular-article__img" src="assets/images/image-retro-pcs.jpg">
+            <div class="popular-article__content">
+                <h2 class="popular-article__title">01</h2>
+                <h3>Reviving Retro PCs</h3>
+                <p>What happens when old PCs are given modern upgrades?</p>
+            </div>
         </div>
         <div class="popular-article">
-            <h2 class="popular-article__title">02</h2>
-            <h3>Top 10 Laptops of 2022</h3>
-            Our best picks for various needs and budgets.
+            <img class="popular-article__img" src="assets/images/image-top-laptops.jpg">
+            <div class="popular-article__content">
+                <h2 class="popular-article__title">02</h2>
+                <h3>Top 10 Laptops of 2022</h3>
+                <p>Our best picks for various needs and budgets.</p>
+            </div>
+
         </div>
         <div class="popular-article">
-            <h2 class="popular-article__title">03</h2>
-            <h3>The Growth of Gaming</h3>
-            How the pandemic has sparked fresh opportunities.
+            <img class="popular-article__img" src="assets/images/image-gaming-growth.jpg">
+            <div class="popular-article__content">
+                <h2 class="popular-article__title">03</h2>
+                <h3>The Growth of Gaming</h3>
+                <p>How the pandemic has sparked fresh opportunities.</p>
+            </div>
         </div>
     </footer>
 

@@ -1,4 +1,5 @@
 :root {
+    --inter-font: "Inter", sans-serif;
     --soft-orange: hsl(35 77% 62%);
     --soft-red:hsl(5 85% 63%);
     --off-white:hsl(36 100% 99%);
@@ -10,16 +11,46 @@
 * {
     box-sizing: border-box;
 }
+
+hr {
+    background: var(--dark-grayish-blue);
+    border-radius: 5px;
+    height: 1px;
+    width: 90%;
+    border: 0;
+}
   
 html {
     height: 100%;
 }
 
 body {
+    font-family: var(--inter-font);
     display: grid;
+    margin: 0;
+    height: 100%;
 }
 
-.toggle-button {
+.main-header {
+    width: 100%;
+    left: 0;
+    right: 0;
+    position: fixed;
+    background: var(--off-white);
+    z-index: 60;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0.5rem;
+}
+
+.logo img {
+    height: 2rem;
+    vertical-align: middle;
+}
+
+.toggle-button,
+.toggle-button-open {
     background: transparent;
     border: none;
 }
@@ -30,11 +61,111 @@ body {
 
 .mobile-nav {
     position: fixed;
-    /* transform: translateX(100%); */
+    transform: translateX(100%);
     background: var(--soft-red);
+    top: 0;
+    right: 0;
     width: 70%;
     height: 100vh;
     z-index: 100;
+    transition: transform 0.5s;
+}
+
+.desktop-nav ul,
+.mobile-nav ul {
+    list-style: none;
+}
+
+.desktop-nav a,
+.mobile-nav a {
+    text-decoration: none;
+}
+
+#main-article {
+    padding: 4rem 1rem 1rem 1rem;
+    margin: 0 0 2rem 0;
+}
+
+#main-article img {
+    width: 100%;
+}
+
+#main-article h1 {
+    color: var(--very-dark-blue);
+    font-weight: 800;
+}
+
+#main-article button {
+    background-color: var(--soft-red);
+    color: var(--off-white);
+    border: none;
+    font-size: 0.8rem;
+    font-family: var(--inter-font);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    padding: 1rem;
+    cursor: pointer;
+}
+
+#new-articles {
+    margin: 0 1rem;
+    padding: 1rem 1rem;
+    background-color: var(--very-dark-blue);
+}
+
+#new-articles h2 {
+    color: var(--soft-orange);
+    font-size: 2rem;
+}
+
+#new-articles h3 {
+    color: var(--off-white);
+}
+
+#new-articles p {
+    color: var(--grayish-blue);
+    line-height: 2rem;
+}
+
+#popular-articles {
+    padding: 3rem 1rem 1rem 1rem;
+}
+
+#popular-articles h2 {
+    font-size: 2rem;
+    color: var(--grayish-blue);
+    margin: 0;
+}
+
+#popular-articles h3 {
+    color: var(--very-dark-blue);
+    font-weight: 800;
+    margin: 0.3rem 0;
+}
+
+#popular-articles p {
+    color: var(--dark-grayish-blue);
+    font-size: 1rem;
+    line-height: 1.6rem;
+    margin: 0;
+}
+
+.popular-article {
+    margin: 2rem 0;
+}
+
+.popular-article__img {
+    display: inline-block;
+    width: 25vw;
+    margin-right: 1rem;
+    vertical-align: middle;
+}
+
+.popular-article__content {
+    width: 60vw;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .attribution { 
@@ -46,21 +177,21 @@ body {
 
 @font-face {
     font-family: "Inter";
-    src: url("assets/font/static/Inter-Regular.ttf") format("truetype");
-    font-weight: normal;
+    src: url("assets/fonts/static/Inter-Regular.ttf") format("truetype");
+    font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Inter";
-    src: url("assets/font/static/Inter-Bold.ttf") format("truetype");
-    font-weight: bold;
+    src: url("assets/fonts/static/Inter-Bold.ttf") format("truetype");
+    font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: "Inter";
-    src: url("assets/font/static/Inter-ExtraBold.ttf") format("truetype");
-    font-weight: bolder;
+    src: url("assets/fonts/static/Inter-ExtraBold.ttf") format("truetype");
+    font-weight: 800;
     font-style: normal;
 }
