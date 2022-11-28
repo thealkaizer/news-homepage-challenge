@@ -1,0 +1,33 @@
+@font-face {
+    font-family: "Inter";
+    src: url("assets/font/static/Inter-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("assets/font/static/Inter-Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("assets/font/static/Inter-ExtraBold.ttf") format("truetype");
+    font-weight: bolder;
+    font-style: normal;
+}
+
+.toggle-button {
+    background: transparent;
+    border: none;
+}
+
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
