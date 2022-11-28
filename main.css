@@ -37,11 +37,11 @@ body {
     right: 0;
     position: fixed;
     background: var(--off-white);
+    padding: 2rem 1rem;
     z-index: 60;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.5rem 0.5rem;
 }
 
 .logo img {
@@ -53,6 +53,13 @@ body {
 .toggle-button-open {
     background: transparent;
     border: none;
+    vertical-align: middle;
+    height: 2rem;
+}
+
+.toggle-button-open {
+    float: right;
+    margin: 2rem;
 }
 
 .desktop-nav {
@@ -62,13 +69,36 @@ body {
 .mobile-nav {
     position: fixed;
     transform: translateX(100%);
-    background: var(--soft-red);
+    background: var(--off-white);
     top: 0;
     right: 0;
     width: 70%;
     height: 100vh;
     z-index: 100;
     transition: transform 0.5s;
+}
+
+.mobile-nav__items {
+    margin: 5rem 0;
+}
+
+.mobile-nav__item {
+    padding: 1rem 0;
+}
+
+.mobile-nav__item a {
+    text-decoration: none;
+    color: var(--very-dark-blue);
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.mobile-nav__item a:active {
+    color: var(--soft-red);
+}
+
+.open {
+    transform: translateX(0);
 }
 
 .desktop-nav ul,
@@ -108,6 +138,11 @@ body {
     cursor: pointer;
 }
 
+
+#main-article button:active {
+    background-color: var(--very-dark-blue);
+}
+
 #new-articles {
     margin: 0 1rem;
     padding: 1rem 1rem;
@@ -121,6 +156,10 @@ body {
 
 #new-articles h3 {
     color: var(--off-white);
+}
+
+#new-articles h3:active {
+    color: var(--soft-orange);
 }
 
 #new-articles p {
@@ -142,6 +181,10 @@ body {
     color: var(--very-dark-blue);
     font-weight: 800;
     margin: 0.3rem 0;
+}
+
+#popular-articles h3:active {
+    color:var(--soft-red);
 }
 
 #popular-articles p {
